@@ -1,3 +1,4 @@
+sudo apt-get update
 curl -fsSL www.get.docker.com > idocker.sh
 sudo chmod +x idocker.sh
 ./idocker.sh
