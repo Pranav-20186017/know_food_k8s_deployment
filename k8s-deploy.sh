@@ -7,5 +7,4 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 sudo mkdir -p /usr/local/bin/
 sudo install minikube /usr/local/bin/
 sudo minikube start --vm-driver none
-sudo minikube start --vm-driver none
 sudo kubectl apply -f deploy-py.yaml
