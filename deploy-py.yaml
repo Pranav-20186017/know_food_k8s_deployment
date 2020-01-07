@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: py-web-server
+  labels:
+    app: py-web-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: py-web-server
+  template:
+    metadata:
+      labels:
+        app: py-web-server
+    spec:
+      containers:
+        - name: py-web-server-container
+          imagePullPolicy: IfNotPresent
+          image: sprx7767/kfood:latest
+          command: ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+          ports:
+          - containerPort: 8000
